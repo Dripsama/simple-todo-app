@@ -9,7 +9,9 @@ export default function App() {
   });
   const [editId, setEditId] = useState("");
 
-
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
 
   const goBtnHandler = (e) => {
     e.preventDefault();
